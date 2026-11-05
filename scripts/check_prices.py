@@ -96,8 +96,8 @@ def offers_of(product):
     return []
 
 
-def read_price(html, url):
-    """Return {'price', 'currency', 'in_stock'} or None."""
+def read_price(html, url, size=""):
+    """Return {'price', 'currency', 'in_stock', 'seen'} or None."""
     variant = (parse_qs(urlparse(url).query).get("variant") or [None])[0]
     candidates = []
     for product in jsonld_products(html):
@@ -115,6 +115,9 @@ def read_price(html, url):
                     "currency": offer.get("priceCurrency"),
                     "url": str(offer.get("url", "")),
                     "in_stock": "OutOfStock" not in str(offer.get("availability", "")),
+                    "label": " ".join(
+                        str(x) for x in (product.get("name"), offer.get("name"), offer.get("sku"), offer.get("url")) if x
+                    ),
                 }
             )
     if candidates:
@@ -122,8 +125,16 @@ def read_price(html, url):
             matched = [c for c in candidates if variant in c["url"]]
             if matched:
                 candidates = matched
+        seen = [{"price": c["price"], "label": c["label"][:80]} for c in candidates[:8]]
+        wanted = re.sub(r"\s+", "", size or "").lower()
+        if wanted:
+            matched = [c for c in candidates if wanted in re.sub(r"\s+", "", c["label"]).lower()]
+            if matched:
+                candidates = matched
         in_stock = [c for c in candidates if c["in_stock"]]
-        return (in_stock or candidates)[0]
+        chosen = dict((in_stock or candidates)[0])
+        chosen["seen"] = seen
+        return chosen
     price = to_price(meta(html, "product:price:amount", "og:price:amount", "price"))
     if price is not None:
         currency = meta(html, "product:price:currency", "og:price:currency", "pricecurrency")
@@ -162,7 +173,7 @@ def main():
         if image:
             item["image"] = urljoin(url, image)
 
-        found = read_price(html, url)
+        found = read_price(html, url, item.get("size", ""))
         if not found:
             item["checkStatus"] = "Photo found but no price on the page"
             print(f"- {name}: no price found")
@@ -185,6 +196,7 @@ def main():
 
         item["price"] = price
         item["inStock"] = found["in_stock"]
+        item["offersSeen"] = found.get("seen", [])
         item["lowest"] = min(h["price"] for h in history)
         item["lastChecked"] = today
         item["checkStatus"] = "OK"

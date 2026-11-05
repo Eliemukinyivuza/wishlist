@@ -7,6 +7,7 @@ on:
   push:
     paths:
       - "items.json"        # check straight away when an item is added
+      - "scripts/**"        # and when the price reader changes
 
 permissions:
   contents: write
