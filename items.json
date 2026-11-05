@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T22:01:14Z",
+  "updated": "2026-11-05T22:02:29Z",
   "items": [
     {
       "id": "idole",
@@ -23,7 +23,25 @@
       "inStock": true,
       "lowest": 66.5,
       "lastChecked": "2026-11-05",
-      "checkStatus": "OK"
+      "checkStatus": "OK",
+      "offersSeen": [
+        {
+          "price": 46.5,
+          "label": "Lancôme Idole Eau de Parfum 50ml 12218756 https://www.lookfantastic.com/p/lancom"
+        },
+        {
+          "price": 77.0,
+          "label": "Lancôme Idole Eau de Parfum 50ml 14991039 https://www.lookfantastic.com/p/lancom"
+        },
+        {
+          "price": 95.25,
+          "label": "Lancôme Idole Eau de Parfum 50ml 12611818 https://www.lookfantastic.com/p/lancom"
+        },
+        {
+          "price": 66.5,
+          "label": "Lancôme Idole Eau de Parfum 50ml 12218754 https://www.lookfantastic.com/p/lancom"
+        }
+      ]
     },
     {
       "id": "la-bomba-intensa",
@@ -47,7 +65,21 @@
       "price": 56.0,
       "inStock": true,
       "lowest": 56.0,
-      "lastChecked": "2026-11-05"
+      "lastChecked": "2026-11-05",
+      "offersSeen": [
+        {
+          "price": 56.0,
+          "label": "Carolina Herrera La Bomba Intensa Eau de Parfum Refillable 50ml 17854046 https:/"
+        },
+        {
+          "price": 105.6,
+          "label": "Carolina Herrera La Bomba Intensa Eau de Parfum Refillable 50ml 17854044 https:/"
+        },
+        {
+          "price": 82.4,
+          "label": "Carolina Herrera La Bomba Intensa Eau de Parfum Refillable 50ml 17854039 https:/"
+        }
+      ]
     },
     {
       "id": "good-girl-blush",
@@ -71,7 +103,21 @@
       "price": 104.25,
       "inStock": true,
       "lowest": 104.25,
-      "lastChecked": "2026-11-05"
+      "lastChecked": "2026-11-05",
+      "offersSeen": [
+        {
+          "price": 60.8,
+          "label": "Carolina Herrera Good Girl Blush Eau de Parfum 50ml 14270128 https://www.lookfan"
+        },
+        {
+          "price": 104.25,
+          "label": "Carolina Herrera Good Girl Blush Eau de Parfum 50ml 14270126 https://www.lookfan"
+        },
+        {
+          "price": 84.75,
+          "label": "Carolina Herrera Good Girl Blush Eau de Parfum 50ml 14270127 https://www.lookfan"
+        }
+      ]
     },
     {
       "id": "scandal-elixir",
@@ -95,7 +141,21 @@
       "price": 64.0,
       "inStock": true,
       "lowest": 64.0,
-      "lastChecked": "2026-11-05"
+      "lastChecked": "2026-11-05",
+      "offersSeen": [
+        {
+          "price": 64.0,
+          "label": "Jean Paul Gaultier Scandal Elixir Parfum 80 ml 17623702 https://www.lookfantasti"
+        },
+        {
+          "price": 116.0,
+          "label": "Jean Paul Gaultier Scandal Elixir Parfum 80 ml 17623701 https://www.lookfantasti"
+        },
+        {
+          "price": 92.0,
+          "label": "Jean Paul Gaultier Scandal Elixir Parfum 80 ml 17623700 https://www.lookfantasti"
+        }
+      ]
     },
     {
       "id": "scandal-elixir-intense",
@@ -132,7 +192,25 @@
       "price": 128.0,
       "inStock": true,
       "lowest": 128.0,
-      "lastChecked": "2026-11-05"
+      "lastChecked": "2026-11-05",
+      "offersSeen": [
+        {
+          "price": 102.4,
+          "label": "Rabanne Fame Eau De Parfum 50ml 13936232 https://www.lookfantastic.com/p/paco-ra"
+        },
+        {
+          "price": 128.0,
+          "label": "Rabanne Fame Eau De Parfum 50ml 13936227 https://www.lookfantastic.com/p/paco-ra"
+        },
+        {
+          "price": 49.5,
+          "label": "Rabanne Fame Eau De Parfum 50ml 13936231 https://www.lookfantastic.com/p/paco-ra"
+        },
+        {
+          "price": 53.6,
+          "label": "Rabanne Fame Eau De Parfum 50ml 13936230 https://www.lookfantastic.com/p/paco-ra"
+        }
+      ]
     },
     {
       "id": "fame-in-love",
@@ -156,7 +234,13 @@
       "price": 75.2,
       "inStock": true,
       "lowest": 75.2,
-      "lastChecked": "2026-11-05"
+      "lastChecked": "2026-11-05",
+      "offersSeen": [
+        {
+          "price": 75.2,
+          "label": "Rabanne Fame In Love Parfum Elixir 50ml 17623714 https://www.lookfantastic.com/p"
+        }
+      ]
     },
     {
       "id": "olympea-elixir",
@@ -180,7 +264,17 @@
       "inStock": true,
       "lowest": 67.99,
       "lastChecked": "2026-11-05",
-      "checkStatus": "OK"
+      "checkStatus": "OK",
+      "offersSeen": [
+        {
+          "price": 67.99,
+          "label": "Paco Rabanne Olympea Elixir Eau De Parfum Intense 50ml PAC0214 https://www.justm"
+        },
+        {
+          "price": 67.99,
+          "label": "Paco Rabanne Olympea Elixir Eau De Parfum Intense 50ml PAC0214 /products/paco-ra"
+        }
+      ]
     },
     {
       "id": "lady-million",
@@ -204,7 +298,17 @@
       "inStock": true,
       "lowest": 52.99,
       "lastChecked": "2026-11-05",
-      "checkStatus": "OK"
+      "checkStatus": "OK",
+      "offersSeen": [
+        {
+          "price": 52.99,
+          "label": "Paco Rabanne Lady Million Eau De Parfum 50ml PAC0024 https://www.justmylook.com/"
+        },
+        {
+          "price": 52.99,
+          "label": "Paco Rabanne Lady Million Eau De Parfum 50ml PAC0024 /products/paco-rabanne-lady"
+        }
+      ]
     },
     {
       "id": "herschel-heritage-duffle",
@@ -228,7 +332,17 @@
       "inStock": true,
       "lowest": 62.99,
       "lastChecked": "2026-11-05",
-      "checkStatus": "OK"
+      "checkStatus": "OK",
+      "offersSeen": [
+        {
+          "price": 62.99,
+          "label": "Herschel Heritage Duffle - Ash Rose / OS https://herschelsupplyco.co.uk/products"
+        },
+        {
+          "price": 62.99,
+          "label": "Herschel Heritage Duffle 11385-02077-OS https://herschelsupplyco.co.uk/products/"
+        }
+      ]
     }
   ]
 }
