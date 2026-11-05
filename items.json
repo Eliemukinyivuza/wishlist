@@ -1,5 +1,5 @@
 {
-  "updated": null,
+  "updated": "2026-11-05T21:55:42Z",
   "items": [
     {
       "id": "idole",
@@ -11,7 +11,19 @@
       "retailer": "LookFantastic",
       "size": "50ml",
       "target": null,
-      "notes": "Clean floral version. Size assumed, change it if you want another."
+      "notes": "Clean floral version. Size assumed, change it if you want another.",
+      "image": "https://static.thcdn.com/productimg/original/12218754-2065330266714203.jpg",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 66.5
+        }
+      ],
+      "price": 66.5,
+      "inStock": true,
+      "lowest": 66.5,
+      "lastChecked": "2026-11-05",
+      "checkStatus": "OK"
     },
     {
       "id": "la-bomba-intensa",
@@ -23,7 +35,8 @@
       "retailer": "John Lewis",
       "size": "",
       "target": null,
-      "notes": ""
+      "notes": "",
+      "checkStatus": "Could not load the page (TimeoutError)"
     },
     {
       "id": "good-girl-blush",
@@ -35,7 +48,8 @@
       "retailer": "Sephora UK",
       "size": "",
       "target": null,
-      "notes": ""
+      "notes": "",
+      "checkStatus": "Shop blocked or removed the page (HTTP 403)"
     },
     {
       "id": "scandal-elixir",
@@ -47,7 +61,8 @@
       "retailer": "John Lewis",
       "size": "",
       "target": null,
-      "notes": ""
+      "notes": "",
+      "checkStatus": "Could not load the page (TimeoutError)"
     },
     {
       "id": "scandal-elixir-intense",
@@ -59,7 +74,8 @@
       "retailer": "",
       "size": "",
       "target": null,
-      "notes": "No link yet. Could not find a product page with this exact name."
+      "notes": "No link yet. Could not find a product page with this exact name.",
+      "checkStatus": "No link yet"
     },
     {
       "id": "fame",
@@ -71,7 +87,8 @@
       "retailer": "Sephora UK",
       "size": "",
       "target": null,
-      "notes": ""
+      "notes": "",
+      "checkStatus": "Shop blocked or removed the page (HTTP 403)"
     },
     {
       "id": "fame-in-love",
@@ -83,7 +100,8 @@
       "retailer": "Beauty The Shop",
       "size": "50ml",
       "target": null,
-      "notes": ""
+      "notes": "",
+      "checkStatus": "Shop blocked or removed the page (HTTP 403)"
     },
     {
       "id": "olympea-elixir",
@@ -95,7 +113,19 @@
       "retailer": "Just My Look",
       "size": "50ml",
       "target": null,
-      "notes": ""
+      "notes": "",
+      "image": "http://www.justmylook.com/cdn/shop/files/PAC0214_3a7e708b-f4f0-4245-b07e-8b90a22961e1.png?v=1788859346",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 67.99
+        }
+      ],
+      "price": 67.99,
+      "inStock": true,
+      "lowest": 67.99,
+      "lastChecked": "2026-11-05",
+      "checkStatus": "OK"
     },
     {
       "id": "lady-million",
@@ -107,7 +137,19 @@
       "retailer": "Just My Look",
       "size": "50ml",
       "target": null,
-      "notes": ""
+      "notes": "",
+      "image": "http://www.justmylook.com/cdn/shop/files/PAC0024_037e34ab-6f88-43d7-8eb5-0efda036ffbe.png?v=1766583600",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 52.99
+        }
+      ],
+      "price": 52.99,
+      "inStock": true,
+      "lowest": 52.99,
+      "lastChecked": "2026-11-05",
+      "checkStatus": "OK"
     },
     {
       "id": "herschel-heritage-duffle",
@@ -119,7 +161,19 @@
       "retailer": "Herschel Supply Co",
       "size": "",
       "target": null,
-      "notes": ""
+      "notes": "",
+      "image": "http://herschelsupplyco.co.uk/cdn/shop/files/11385-05592-os-01-aZ7cfyZ9.jpg?v=1781302668&width=2000",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 62.99
+        }
+      ],
+      "price": 62.99,
+      "inStock": true,
+      "lowest": 62.99,
+      "lastChecked": "2026-11-05",
+      "checkStatus": "OK"
     }
   ]
 }
