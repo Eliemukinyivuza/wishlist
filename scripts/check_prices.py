@@ -114,6 +114,7 @@ def read_price(html, url, size=""):
                     "price": price,
                     "currency": offer.get("priceCurrency"),
                     "url": str(offer.get("url", "")),
+                    "sku": str(offer.get("sku", "")),
                     "in_stock": "OutOfStock" not in str(offer.get("availability", "")),
                     "label": " ".join(
                         str(x) for x in (product.get("name"), offer.get("name"), offer.get("sku"), offer.get("url")) if x
@@ -130,7 +131,9 @@ def read_price(html, url, size=""):
         # product id in the link says which one this item is.
         ids = re.findall(r"/(\d{5,})/?(?:$|\?)", urlparse(url).path + "?")
         if ids:
-            same = [c for c in candidates if ids[-1] in c["url"]]
+            same = [c for c in candidates if c["sku"] == ids[-1]]
+            if not same:
+                same = [c for c in candidates if ids[-1] in c["url"]]
             if same:
                 candidates = same
         wanted = re.sub(r"\s+", "", size or "").lower()
