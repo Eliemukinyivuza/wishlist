@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   check:
@@ -20,19 +21,30 @@ jobs:
       - name: Read prices and photos
         run: python3 scripts/check_prices.py
 
-      - name: Phone alert (optional)
-        # Set a repository secret called NTFY_TOPIC to turn this on.
+      - name: Email me about deals
+        # GitHub emails you when you are mentioned in an issue, so a deal
+        # shows up in your inbox as a new issue that mentions you.
         env:
-          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          GH_TOKEN: ${{ github.token }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.repository }}
         run: |
-          if [ -n "$NTFY_TOPIC" ] && [ -s alerts.txt ]; then
-            curl -s -H "Title: Wishlist deal" -H "Tags: shopping_bags" \
-              --data-binary @alerts.txt "https://ntfy.sh/$NTFY_TOPIC"
+          if [ -s alerts.txt ]; then
+            {
+              echo "@$OWNER, there is news on your wishlist:"
+              echo
+              sed 's/^/- /' alerts.txt
+              echo
+              echo "See the full list: https://$OWNER.github.io/${REPO#*/}/"
+            } > issue.md
+            gh issue create --repo "$REPO" \
+              --title "Wishlist deal: $(head -n 1 alerts.txt | cut -c1-70)" \
+              --body-file issue.md
           fi
 
       - name: Save the new prices
         run: |
-          rm -f alerts.txt
+          rm -f alerts.txt issue.md
           git config user.name "wishlist-bot"
           git config user.email "wishlist-bot@users.noreply.github.com"
           git add items.json

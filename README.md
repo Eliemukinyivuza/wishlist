@@ -7,12 +7,9 @@ A pink wishlist with product photos, categories and daily price checks.
 - `scripts/check_prices.py` reads the price and photo from each link.
 - `.github/workflows/check-prices.yml` runs that script every day and when `items.json` changes.
 
-## Phone alerts (optional)
+## Email alerts
 
-1. Install the free ntfy app and subscribe to a topic name only you know.
-2. In the repo go to Settings, Secrets and variables, Actions, and add a secret called `NTFY_TOPIC` with that topic name.
-
-The daily check then sends a notification when an item reaches its target price or hits a new lowest price.
+When an item reaches its target price or hits a new lowest price, the daily check opens an issue in this repo that mentions the owner. GitHub emails that to the address on the GitHub account. Check that email notifications are on under GitHub Settings, Notifications.
 
 ## Notes
 
