@@ -31,12 +31,12 @@
       "category": "Perfume",
       "for": "Me",
       "priority": "Want",
-      "url": "https://www.johnlewis.com/carolina-herrera-la-bomba-intensa-eau-de-parfum/p115593194",
-      "retailer": "John Lewis",
-      "size": "",
+      "url": "https://www.lookfantastic.com/p/carolina-herrera-la-bomba-intensa-eau-de-parfum-refillable-50ml/17854039/",
+      "retailer": "LookFantastic",
+      "size": "50ml",
       "target": null,
       "notes": "",
-      "checkStatus": "Could not load the page (TimeoutError)"
+      "checkStatus": "Not checked yet"
     },
     {
       "id": "good-girl-blush",
@@ -44,12 +44,12 @@
       "category": "Perfume",
       "for": "Me",
       "priority": "Want",
-      "url": "https://www.sephora.co.uk/p/carolina-herrera-good-girl-blush-eau-de-parfum",
-      "retailer": "Sephora UK",
-      "size": "",
+      "url": "https://www.lookfantastic.com/p/carolina-herrera-good-girl-blush-eau-de-parfum-50ml/14270127/",
+      "retailer": "LookFantastic",
+      "size": "50ml",
       "target": null,
       "notes": "",
-      "checkStatus": "Shop blocked or removed the page (HTTP 403)"
+      "checkStatus": "Not checked yet"
     },
     {
       "id": "scandal-elixir",
@@ -57,12 +57,12 @@
       "category": "Perfume",
       "for": "Me",
       "priority": "Want",
-      "url": "https://www.johnlewis.com/jean-paul-gaultier-scandal-elixir-parfum/p114791622",
-      "retailer": "John Lewis",
-      "size": "",
+      "url": "https://www.lookfantastic.com/p/jean-paul-gaultier-scandal-elixir-parfum-80-ml/17623701/",
+      "retailer": "LookFantastic",
+      "size": "80ml",
       "target": null,
       "notes": "",
-      "checkStatus": "Could not load the page (TimeoutError)"
+      "checkStatus": "Not checked yet"
     },
     {
       "id": "scandal-elixir-intense",
@@ -83,12 +83,12 @@
       "category": "Perfume",
       "for": "Me",
       "priority": "Want",
-      "url": "https://www.sephora.co.uk/p/rabanne-fragrances-fame-refillable-eau-de-parfum",
-      "retailer": "Sephora UK",
+      "url": "https://www.lookfantastic.com/p/paco-rabanne-fame-eau-de-parfum-50ml/13936231/",
+      "retailer": "LookFantastic",
       "size": "50ml",
       "target": 74,
       "notes": "Fair price set at about 25% under the usual £99 for 50ml.",
-      "checkStatus": "Shop blocked or removed the page (HTTP 403)"
+      "checkStatus": "Not checked yet"
     },
     {
       "id": "fame-in-love",
@@ -96,12 +96,12 @@
       "category": "Perfume",
       "for": "Me",
       "priority": "Want",
-      "url": "https://www.beautytheshop.com/uk/fragrance/ladies-fragrance/rabanne-fame-in-love-parfum-elixir-spray-50ml-5",
-      "retailer": "Beauty The Shop",
+      "url": "https://www.lookfantastic.com/p/rabanne-fame-in-love-parfum-elixir-50ml/17623714/",
+      "retailer": "LookFantastic",
       "size": "50ml",
       "target": null,
       "notes": "",
-      "checkStatus": "Shop blocked or removed the page (HTTP 403)"
+      "checkStatus": "Not checked yet"
     },
     {
       "id": "olympea-elixir",
