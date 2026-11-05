@@ -195,8 +195,8 @@ def main():
 
         price = found["price"]
         history = item.setdefault("history", [])
-        prior = [h["price"] for h in history if h["date"] != today]
-        previous = prior[-1] if prior else None
+        earlier = [h["price"] for h in history]
+        previous = earlier[-1] if earlier else None
 
         if history and history[-1]["date"] == today:
             history[-1]["price"] = price
@@ -214,7 +214,7 @@ def main():
         target = item.get("target")
         if target is not None and price <= target and not (previous is not None and previous <= target):
             alerts.append(f"{name} is now £{price:.2f}, at or under your £{target:.2f} target")
-        elif prior and price < min(prior):
+        elif earlier and price < min(earlier):
             alerts.append(f"{name} hit a new lowest price: £{price:.2f}")
         print(f"- {name}: £{price:.2f}")
 
