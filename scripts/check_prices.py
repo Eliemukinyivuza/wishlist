@@ -126,6 +126,13 @@ def read_price(html, url, size=""):
             if matched:
                 candidates = matched
         seen = [{"price": c["price"], "label": c["label"][:80]} for c in candidates[:8]]
+        # Pages such as LookFantastic list every size under one name. The
+        # product id in the link says which one this item is.
+        ids = re.findall(r"/(\d{5,})/?(?:$|\?)", urlparse(url).path + "?")
+        if ids:
+            same = [c for c in candidates if ids[-1] in c["url"]]
+            if same:
+                candidates = same
         wanted = re.sub(r"\s+", "", size or "").lower()
         if wanted:
             matched = [c for c in candidates if wanted in re.sub(r"\s+", "", c["label"]).lower()]
