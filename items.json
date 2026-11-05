@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T21:58:23Z",
+  "updated": "2026-11-05T22:01:14Z",
   "items": [
     {
       "id": "idole",
@@ -36,7 +36,18 @@
       "size": "50ml",
       "target": null,
       "notes": "",
-      "checkStatus": "Not checked yet"
+      "checkStatus": "OK",
+      "image": "https://static.thcdn.com/productimg/original/17854039-9185355450862050.jpg",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 56.0
+        }
+      ],
+      "price": 56.0,
+      "inStock": true,
+      "lowest": 56.0,
+      "lastChecked": "2026-11-05"
     },
     {
       "id": "good-girl-blush",
@@ -49,7 +60,18 @@
       "size": "50ml",
       "target": null,
       "notes": "",
-      "checkStatus": "Not checked yet"
+      "checkStatus": "OK",
+      "image": "https://static.thcdn.com/productimg/original/14270127-8235318191965471.jpg",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 104.25
+        }
+      ],
+      "price": 104.25,
+      "inStock": true,
+      "lowest": 104.25,
+      "lastChecked": "2026-11-05"
     },
     {
       "id": "scandal-elixir",
@@ -62,7 +84,18 @@
       "size": "80ml",
       "target": null,
       "notes": "",
-      "checkStatus": "Not checked yet"
+      "checkStatus": "OK",
+      "image": "https://static.thcdn.com/productimg/original/17623701-9525352318581652.jpg",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 64.0
+        }
+      ],
+      "price": 64.0,
+      "inStock": true,
+      "lowest": 64.0,
+      "lastChecked": "2026-11-05"
     },
     {
       "id": "scandal-elixir-intense",
@@ -88,7 +121,18 @@
       "size": "50ml",
       "target": 74,
       "notes": "Fair price set at about 25% under the usual £99 for 50ml.",
-      "checkStatus": "Not checked yet"
+      "checkStatus": "OK",
+      "image": "https://static.thcdn.com/productimg/original/13936231-3455323123544319.jpg",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 128.0
+        }
+      ],
+      "price": 128.0,
+      "inStock": true,
+      "lowest": 128.0,
+      "lastChecked": "2026-11-05"
     },
     {
       "id": "fame-in-love",
@@ -101,7 +145,18 @@
       "size": "50ml",
       "target": null,
       "notes": "",
-      "checkStatus": "Not checked yet"
+      "checkStatus": "OK",
+      "image": "https://static.thcdn.com/productimg/original/17623714-5145323113750150.jpg",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 75.2
+        }
+      ],
+      "price": 75.2,
+      "inStock": true,
+      "lowest": 75.2,
+      "lastChecked": "2026-11-05"
     },
     {
       "id": "olympea-elixir",
