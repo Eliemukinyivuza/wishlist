@@ -1,0 +1,41 @@
+name: Check prices
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # every day at 06:17 UTC
+  workflow_dispatch:        # the "Run workflow" button
+  push:
+    paths:
+      - "items.json"        # check straight away when an item is added
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read prices and photos
+        run: python3 scripts/check_prices.py
+
+      - name: Phone alert (optional)
+        # Set a repository secret called NTFY_TOPIC to turn this on.
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: |
+          if [ -n "$NTFY_TOPIC" ] && [ -s alerts.txt ]; then
+            curl -s -H "Title: Wishlist deal" -H "Tags: shopping_bags" \
+              --data-binary @alerts.txt "https://ntfy.sh/$NTFY_TOPIC"
+          fi
+
+      - name: Save the new prices
+        run: |
+          rm -f alerts.txt
+          git config user.name "wishlist-bot"
+          git config user.email "wishlist-bot@users.noreply.github.com"
+          git add items.json
+          git diff --staged --quiet || git commit -m "Update prices"
+          git pull --rebase -q
+          git push

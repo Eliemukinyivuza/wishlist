@@ -1,0 +1,125 @@
+{
+  "updated": null,
+  "items": [
+    {
+      "id": "idole",
+      "name": "Lancôme Idôle Eau de Parfum",
+      "category": "Perfume",
+      "for": "Me",
+      "priority": "Want",
+      "url": "https://www.lookfantastic.com/p/lancome-idole-eau-de-parfum-50ml/12218754/",
+      "retailer": "LookFantastic",
+      "size": "50ml",
+      "target": null,
+      "notes": "Clean floral version. Size assumed, change it if you want another."
+    },
+    {
+      "id": "la-bomba-intensa",
+      "name": "Carolina Herrera La Bomba Intensa",
+      "category": "Perfume",
+      "for": "Me",
+      "priority": "Want",
+      "url": "https://www.johnlewis.com/carolina-herrera-la-bomba-intensa-eau-de-parfum/p115593194",
+      "retailer": "John Lewis",
+      "size": "",
+      "target": null,
+      "notes": ""
+    },
+    {
+      "id": "good-girl-blush",
+      "name": "Carolina Herrera Good Girl Blush",
+      "category": "Perfume",
+      "for": "Me",
+      "priority": "Want",
+      "url": "https://www.sephora.co.uk/p/carolina-herrera-good-girl-blush-eau-de-parfum",
+      "retailer": "Sephora UK",
+      "size": "",
+      "target": null,
+      "notes": ""
+    },
+    {
+      "id": "scandal-elixir",
+      "name": "Jean Paul Gaultier Scandal Elixir",
+      "category": "Perfume",
+      "for": "Me",
+      "priority": "Want",
+      "url": "https://www.johnlewis.com/jean-paul-gaultier-scandal-elixir-parfum/p114791622",
+      "retailer": "John Lewis",
+      "size": "",
+      "target": null,
+      "notes": ""
+    },
+    {
+      "id": "scandal-elixir-intense",
+      "name": "Jean Paul Gaultier Scandal Elixir Intense",
+      "category": "Perfume",
+      "for": "Me",
+      "priority": "Want",
+      "url": "",
+      "retailer": "",
+      "size": "",
+      "target": null,
+      "notes": "No link yet. Could not find a product page with this exact name."
+    },
+    {
+      "id": "fame",
+      "name": "Paco Rabanne Fame",
+      "category": "Perfume",
+      "for": "Me",
+      "priority": "Want",
+      "url": "https://www.sephora.co.uk/p/rabanne-fragrances-fame-refillable-eau-de-parfum",
+      "retailer": "Sephora UK",
+      "size": "",
+      "target": null,
+      "notes": ""
+    },
+    {
+      "id": "fame-in-love",
+      "name": "Paco Rabanne Fame In Love",
+      "category": "Perfume",
+      "for": "Me",
+      "priority": "Want",
+      "url": "https://www.beautytheshop.com/uk/fragrance/ladies-fragrance/rabanne-fame-in-love-parfum-elixir-spray-50ml-5",
+      "retailer": "Beauty The Shop",
+      "size": "50ml",
+      "target": null,
+      "notes": ""
+    },
+    {
+      "id": "olympea-elixir",
+      "name": "Paco Rabanne Olympéa Elixir",
+      "category": "Perfume",
+      "for": "Me",
+      "priority": "Want",
+      "url": "https://www.justmylook.com/products/paco-rabanne-olympea-elixir-eau-de-parfum-intense-50ml",
+      "retailer": "Just My Look",
+      "size": "50ml",
+      "target": null,
+      "notes": ""
+    },
+    {
+      "id": "lady-million",
+      "name": "Paco Rabanne Lady Million",
+      "category": "Perfume",
+      "for": "Me",
+      "priority": "Want",
+      "url": "https://www.justmylook.com/products/paco-rabanne-lady-million-eau-de-parfum-50ml",
+      "retailer": "Just My Look",
+      "size": "50ml",
+      "target": null,
+      "notes": ""
+    },
+    {
+      "id": "herschel-heritage-duffle",
+      "name": "Herschel Heritage Duffle",
+      "category": "Bag",
+      "for": "Me",
+      "priority": "Want",
+      "url": "https://herschelsupplyco.co.uk/products/herschel-heritage-duffle?variant=44515456549096",
+      "retailer": "Herschel Supply Co",
+      "size": "",
+      "target": null,
+      "notes": ""
+    }
+  ]
+}

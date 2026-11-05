@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Wishlist</title>
+<style>
+  :root {
+    --pink: #e75480;
+    --deep: #c2185b;
+    --blush: #ffe4ec;
+    --petal: #fff5f8;
+    --ink: #3b1a28;
+    --muted: #8a5a6c;
+    --line: #f4b6c8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background: linear-gradient(180deg, var(--blush) 0, var(--petal) 340px) no-repeat, var(--petal);
+    min-height: 100vh;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px 48px; }
+  header { padding: 40px 0 20px; }
+  h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: clamp(2.2rem, 7vw, 3.4rem);
+    color: var(--deep);
+    letter-spacing: -0.5px;
+  }
+  .sub { margin: 6px 0 0; color: var(--muted); font-size: 0.95rem; }
+  .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 18px 0 8px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    border: 1.5px solid var(--line);
+    background: #fff;
+    color: var(--deep);
+    padding: 7px 14px;
+    border-radius: 999px;
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  .chip[aria-pressed="true"] { background: var(--pink); border-color: var(--pink); color: #fff; font-weight: 600; }
+  .spacer { flex: 1; }
+  select, input[type="search"] {
+    font: inherit; font-size: 0.9rem; color: var(--ink);
+    border: 1.5px solid var(--line); background: #fff; border-radius: 12px; padding: 7px 12px;
+  }
+  label.toggle { display: flex; gap: 6px; align-items: center; font-size: 0.9rem; color: var(--deep); cursor: pointer; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+  }
+  .card {
+    position: relative;
+    display: flex; flex-direction: column;
+    background: #fff;
+    border: 1.5px solid var(--line);
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 6px 18px rgba(194, 24, 91, 0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  a.card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(194, 24, 91, 0.16); }
+  .photo {
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(135deg, var(--blush), #ffc9da);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .photo img { width: 100%; height: 100%; object-fit: contain; background: #fff; }
+  .photo .initial {
+    font-family: Georgia, serif; font-style: italic; font-size: 4rem; color: var(--deep); opacity: 0.55;
+  }
+  .badge {
+    position: absolute; top: 10px; left: 10px;
+    background: var(--deep); color: #fff;
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.3px;
+    padding: 5px 10px; border-radius: 999px;
+  }
+  .badge.low { background: var(--pink); }
+  .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 0.72rem; background: var(--blush); color: var(--deep);
+    padding: 3px 9px; border-radius: 999px; font-weight: 600;
+  }
+  .name { margin: 0; font-size: 1.02rem; line-height: 1.3; font-weight: 700; }
+  .shop { color: var(--muted); font-size: 0.82rem; }
+  .price-row { display: flex; align-items: baseline; gap: 10px; margin-top: auto; }
+  .price { font-size: 1.5rem; font-weight: 800; color: var(--deep); }
+  .price.none { font-size: 0.95rem; font-weight: 600; color: var(--muted); }
+  .facts { font-size: 0.8rem; color: var(--muted); display: flex; flex-direction: column; gap: 2px; }
+  .status { font-size: 0.82rem; font-weight: 700; color: var(--deep); }
+  .spark { width: 100%; height: 34px; margin-top: 2px; }
+  .empty { text-align: center; color: var(--muted); padding: 48px 0; }
+  footer { margin-top: 36px; text-align: center; color: var(--muted); font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>My Wishlist</h1>
+    <p class="sub" id="sub">Loading…</p>
+    <div class="controls">
+      <div class="chips" id="chips" role="group" aria-label="Category"></div>
+      <span class="spacer"></span>
+      <select id="who" aria-label="Who it is for"></select>
+      <select id="sort" aria-label="Sort">
+        <option value="priority">Sort: priority</option>
+        <option value="target">Sort: closest to target</option>
+        <option value="price">Sort: price, low to high</option>
+      </select>
+      <label class="toggle"><input type="checkbox" id="deals"> Only deals</label>
+    </div>
+  </header>
+  <main>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>Nothing matches those filters.</div>
+  </main>
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const state = { cat: "All", who: "All", sort: "priority", deals: false };
+let data = { items: [], updated: null };
+
+const money = (n) => "£" + n.toFixed(2);
+const PRIORITY = { "Must have": 0, "Want": 1, "Nice to have": 2 };
+const el = (tag, cls, text) => {
+  const node = document.createElement(tag);
+  if (cls) node.className = cls;
+  if (text != null) node.textContent = text;
+  return node;
+};
+
+function isDeal(it) {
+  return it.price != null && it.target != null && it.price <= it.target;
+}
+
+function statusText(it) {
+  if (!it.url) return "Needs a link";
+  if (it.price == null) return it.checkStatus && it.checkStatus !== "OK" ? it.checkStatus : "Not checked yet";
+  if (it.target == null) return "Set a target price";
+  if (it.price <= it.target) return "Buy now";
+  return money(it.price - it.target) + " above your target";
+}
+
+function sparkline(history) {
+  if (!history || history.length < 2) return null;
+  const pts = history.slice(-30).map((h) => h.price);
+  const lo = Math.min(...pts), hi = Math.max(...pts);
+  const span = hi - lo || 1;
+  const w = 200, h = 34, pad = 3;
+  const coords = pts.map((p, i) => {
+    const x = pad + (i * (w - pad * 2)) / (pts.length - 1);
+    const y = h - pad - ((p - lo) / span) * (h - pad * 2);
+    return x.toFixed(1) + "," + y.toFixed(1);
+  });
+  const ns = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("viewBox", "0 0 " + w + " " + h);
+  svg.setAttribute("class", "spark");
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", "Price over the last " + pts.length + " checks");
+  const line = document.createElementNS(ns, "polyline");
+  line.setAttribute("points", coords.join(" "));
+  line.setAttribute("fill", "none");
+  line.setAttribute("stroke", "#e75480");
+  line.setAttribute("stroke-width", "2.5");
+  line.setAttribute("stroke-linecap", "round");
+  line.setAttribute("stroke-linejoin", "round");
+  svg.appendChild(line);
+  return svg;
+}
+
+function card(it) {
+  const root = it.url ? el("a", "card") : el("div", "card");
+  if (it.url) { root.href = it.url; root.target = "_blank"; root.rel = "noopener"; }
+
+  const photo = el("div", "photo");
+  const initial = el("span", "initial", (it.name || "?").trim().charAt(0).toUpperCase());
+  if (it.image) {
+    const img = document.createElement("img");
+    img.src = it.image;
+    img.alt = it.name;
+    img.loading = "lazy";
+    img.referrerPolicy = "no-referrer";
+    img.onerror = () => { img.remove(); photo.appendChild(initial); };
+    photo.appendChild(img);
+  } else {
+    photo.appendChild(initial);
+  }
+  if (isDeal(it)) photo.appendChild(el("span", "badge", "Buy now"));
+  else if (it.price != null && it.history && it.history.length > 1 && it.price <= it.lowest) {
+    photo.appendChild(el("span", "badge low", "Lowest yet"));
+  }
+  root.appendChild(photo);
+
+  const body = el("div", "body");
+  const tags = el("div", "tags");
+  if (it.category) tags.appendChild(el("span", "tag", it.category));
+  if (it.for) tags.appendChild(el("span", "tag", "For " + it.for));
+  body.appendChild(tags);
+  body.appendChild(el("h2", "name", it.name));
+  const shop = [it.retailer, it.size].filter(Boolean).join(" · ");
+  if (shop) body.appendChild(el("div", "shop", shop));
+
+  const row = el("div", "price-row");
+  if (it.price != null) row.appendChild(el("span", "price", money(it.price)));
+  else row.appendChild(el("span", "price none", "No price yet"));
+  body.appendChild(row);
+
+  const facts = el("div", "facts");
+  if (it.target != null) facts.appendChild(el("span", null, "Target " + money(it.target)));
+  if (it.lowest != null && it.price != null && it.lowest < it.price) facts.appendChild(el("span", null, "Lowest seen " + money(it.lowest)));
+  if (it.inStock === false) facts.appendChild(el("span", null, "Out of stock"));
+  if (it.notes) facts.appendChild(el("span", null, it.notes));
+  body.appendChild(facts);
+
+  const spark = sparkline(it.history);
+  if (spark) body.appendChild(spark);
+  body.appendChild(el("div", "status", statusText(it)));
+  root.appendChild(body);
+  return root;
+}
+
+function visible() {
+  let list = data.items.filter((it) =>
+    (state.cat === "All" || it.category === state.cat) &&
+    (state.who === "All" || it.for === state.who) &&
+    (!state.deals || isDeal(it)));
+  const gap = (it) => (it.price != null && it.target != null ? it.price - it.target : Infinity);
+  const sorters = {
+    priority: (a, b) => (PRIORITY[a.priority] ?? 3) - (PRIORITY[b.priority] ?? 3),
+    target: (a, b) => gap(a) - gap(b),
+    price: (a, b) => (a.price ?? Infinity) - (b.price ?? Infinity),
+  };
+  return list.slice().sort(sorters[state.sort]);
+}
+
+function render() {
+  const grid = document.getElementById("grid");
+  grid.replaceChildren();
+  const list = visible();
+  list.forEach((it) => grid.appendChild(card(it)));
+  document.getElementById("empty").hidden = list.length > 0;
+  document.querySelectorAll("#chips .chip").forEach((c) =>
+    c.setAttribute("aria-pressed", String(c.dataset.cat === state.cat)));
+}
+
+function setup() {
+  const cats = ["All", ...new Set(data.items.map((i) => i.category).filter(Boolean))];
+  const chips = document.getElementById("chips");
+  cats.forEach((c) => {
+    const b = el("button", "chip", c);
+    b.type = "button";
+    b.dataset.cat = c;
+    b.onclick = () => { state.cat = c; render(); };
+    chips.appendChild(b);
+  });
+  const whos = ["All", ...new Set(data.items.map((i) => i.for).filter(Boolean))];
+  const who = document.getElementById("who");
+  whos.forEach((w) => who.appendChild(new Option(w === "All" ? "For: everyone" : "For " + w, w)));
+  who.onchange = () => { state.who = who.value; render(); };
+  document.getElementById("sort").onchange = (e) => { state.sort = e.target.value; render(); };
+  document.getElementById("deals").onchange = (e) => { state.deals = e.target.checked; render(); };
+
+  const n = data.items.length;
+  document.getElementById("sub").textContent = n + (n === 1 ? " thing" : " things") + " I am after";
+  const foot = document.getElementById("foot");
+  if (data.updated) {
+    const d = new Date(data.updated);
+    foot.textContent = "Prices last checked " + d.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+  } else {
+    foot.textContent = "Prices have not been checked yet. The first check runs on its own overnight.";
+  }
+}
+
+fetch("items.json?v=" + Date.now())
+  .then((r) => r.json())
+  .then((json) => { data = json; setup(); render(); })
+  .catch(() => { document.getElementById("sub").textContent = "Could not load the list."; });
+</script>
+</body>
+</html>
