@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T13:34:26Z",
+  "updated": "2026-11-09T16:32:29Z",
   "items": [
     {
       "id": "idole",
@@ -29,12 +29,16 @@
         {
           "date": "2026-11-08",
           "price": 66.5
+        },
+        {
+          "date": "2026-11-09",
+          "price": 66.5
         }
       ],
       "price": 66.5,
       "inStock": true,
       "lowest": 66.5,
-      "lastChecked": "2026-11-08",
+      "lastChecked": "2026-11-09",
       "checkStatus": "OK",
       "offersSeen": [
         {
@@ -84,12 +88,16 @@
         {
           "date": "2026-11-08",
           "price": 82.4
+        },
+        {
+          "date": "2026-11-09",
+          "price": 82.4
         }
       ],
       "price": 82.4,
       "inStock": true,
       "lowest": 82.4,
-      "lastChecked": "2026-11-08",
+      "lastChecked": "2026-11-09",
       "offersSeen": [
         {
           "price": 56.0,
@@ -134,12 +142,16 @@
         {
           "date": "2026-11-08",
           "price": 84.75
+        },
+        {
+          "date": "2026-11-09",
+          "price": 84.75
         }
       ],
       "price": 84.75,
       "inStock": true,
       "lowest": 84.75,
-      "lastChecked": "2026-11-08",
+      "lastChecked": "2026-11-09",
       "offersSeen": [
         {
           "price": 60.8,
@@ -184,12 +196,16 @@
         {
           "date": "2026-11-08",
           "price": 116.0
+        },
+        {
+          "date": "2026-11-09",
+          "price": 116.0
         }
       ],
       "price": 116.0,
       "inStock": true,
       "lowest": 116.0,
-      "lastChecked": "2026-11-08",
+      "lastChecked": "2026-11-09",
       "offersSeen": [
         {
           "price": 64.0,
@@ -247,12 +263,16 @@
         {
           "date": "2026-11-08",
           "price": 49.5
+        },
+        {
+          "date": "2026-11-09",
+          "price": 49.5
         }
       ],
       "price": 49.5,
       "inStock": false,
       "lowest": 49.5,
-      "lastChecked": "2026-11-08",
+      "lastChecked": "2026-11-09",
       "offersSeen": [
         {
           "price": 102.4,
@@ -301,12 +321,16 @@
         {
           "date": "2026-11-08",
           "price": 75.2
+        },
+        {
+          "date": "2026-11-09",
+          "price": 75.2
         }
       ],
       "price": 75.2,
       "inStock": true,
       "lowest": 75.2,
-      "lastChecked": "2026-11-08",
+      "lastChecked": "2026-11-09",
       "offersSeen": [
         {
           "price": 75.2,
@@ -342,12 +366,16 @@
         {
           "date": "2026-11-08",
           "price": 67.99
+        },
+        {
+          "date": "2026-11-09",
+          "price": 67.99
         }
       ],
       "price": 67.99,
       "inStock": true,
       "lowest": 67.99,
-      "lastChecked": "2026-11-08",
+      "lastChecked": "2026-11-09",
       "checkStatus": "OK",
       "offersSeen": [
         {
@@ -388,12 +416,16 @@
         {
           "date": "2026-11-08",
           "price": 52.99
+        },
+        {
+          "date": "2026-11-09",
+          "price": 52.99
         }
       ],
       "price": 52.99,
       "inStock": true,
       "lowest": 52.99,
-      "lastChecked": "2026-11-08",
+      "lastChecked": "2026-11-09",
       "checkStatus": "OK",
       "offersSeen": [
         {
@@ -434,12 +466,16 @@
         {
           "date": "2026-11-08",
           "price": 62.99
+        },
+        {
+          "date": "2026-11-09",
+          "price": 62.99
         }
       ],
       "price": 62.99,
       "inStock": true,
       "lowest": 62.99,
-      "lastChecked": "2026-11-08",
+      "lastChecked": "2026-11-09",
       "checkStatus": "OK",
       "offersSeen": [
         {
