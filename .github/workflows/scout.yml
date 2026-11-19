@@ -1,0 +1,45 @@
+name: Deal scout
+
+# Once a week, look for each item at other UK shops. Needs the SERPAPI_KEY
+# secret (free key from serpapi.com). Without it the scout does nothing.
+
+on:
+  schedule:
+    - cron: "43 9 * * 0"   # Sundays at 09:43 UTC
+  workflow_dispatch:        # the "Run workflow" button
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: wishlist-data
+  cancel-in-progress: false
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Look at other shops
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: python3 scripts/scout.py
+
+      - name: Email me about cheaper shops
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.repository }}
+        run: scripts/notify.sh "Cheaper elsewhere"
+
+      - name: Save what was found
+        run: |
+          rm -f alerts.txt issue.md
+          git config user.name "wishlist-bot"
+          git config user.email "wishlist-bot@users.noreply.github.com"
+          git add items.json
+          git diff --staged --quiet || git commit -m "Scout other shops"
+          git pull --rebase -q
+          git push

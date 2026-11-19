@@ -3,130 +3,238 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>My Wishlist</title>
+<title>My Wishlist ♡</title>
+<meta name="theme-color" content="#ffd6e4">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎀</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500;1,9..144,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --pink: #e75480;
-    --deep: #c2185b;
-    --blush: #ffe4ec;
-    --petal: #fff5f8;
-    --ink: #3b1a28;
-    --muted: #8a5a6c;
-    --line: #f4b6c8;
+    --rose: #e8507f;
+    --deep: #b0124f;
+    --berry: #7a0f3a;
+    --blush: #ffe3ec;
+    --petal: #fff7fa;
+    --cream: #fffdfb;
+    --ink: #3a1626;
+    --muted: #94627a;
+    --line: #f6c4d4;
+    --gold: #e9b44c;
+    --mint: #1f9d74;
+    --radius: 26px;
+    --shadow: 0 1px 2px rgba(122, 15, 58, 0.06), 0 10px 30px -12px rgba(176, 18, 79, 0.22);
   }
   * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
-    font-family: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     color: var(--ink);
-    background: linear-gradient(180deg, var(--blush) 0, var(--petal) 340px) no-repeat, var(--petal);
+    background:
+      radial-gradient(1200px 500px at 85% -10%, #ffc6d9 0, transparent 60%),
+      radial-gradient(900px 420px at -10% 0, #ffe8d6 0, transparent 55%),
+      var(--petal);
     min-height: 100vh;
   }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px 48px; }
-  header { padding: 40px 0 20px; }
+  body::before {
+    /* tiny sprinkle of hearts and sparkles */
+    content: "";
+    position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: 0.5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cg fill='%23f3a9c1' opacity='.55'%3E%3Cpath d='M30 38c-3-6-12-5-12 2 0 5 7 9 12 13 5-4 12-8 12-13 0-7-9-8-12-2z'/%3E%3Cpath d='M118 104l3 7 7 3-7 3-3 7-3-7-7-3 7-3z'/%3E%3Ccircle cx='96' cy='30' r='2.5'/%3E%3Ccircle cx='40' cy='130' r='2'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  .wrap { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 0 18px 56px; }
+
+  /* ---------- header ---------- */
+  header { padding: 46px 0 8px; text-align: center; }
+  .kicker {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase;
+    color: var(--deep); background: rgba(255,255,255,0.7);
+    border: 1px solid var(--line); padding: 6px 14px; border-radius: 999px;
+    backdrop-filter: blur(6px);
+  }
   h1 {
-    margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
-    font-style: italic;
-    font-weight: 700;
-    font-size: clamp(2.2rem, 7vw, 3.4rem);
-    color: var(--deep);
-    letter-spacing: -0.5px;
+    margin: 14px 0 0;
+    font-family: "Fraunces", Georgia, serif;
+    font-style: italic; font-weight: 700;
+    font-size: clamp(2.8rem, 10vw, 5rem);
+    line-height: 0.95; letter-spacing: -1.5px;
+    color: var(--berry);
   }
-  .sub { margin: 6px 0 0; color: var(--muted); font-size: 0.95rem; }
-  .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 18px 0 8px; }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  h1 .heart { font-style: normal; color: var(--rose); display: inline-block; animation: beat 2.4s ease-in-out infinite; }
+  @keyframes beat { 0%, 100% { transform: scale(1); } 12% { transform: scale(1.18); } 24% { transform: scale(1); } }
+  .sub { margin: 12px 0 0; color: var(--muted); font-size: 1rem; }
+
+  /* ---------- stats ---------- */
+  .stats {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+    max-width: 640px; margin: 26px auto 6px;
+  }
+  .stat {
+    background: rgba(255,255,255,0.78); backdrop-filter: blur(8px);
+    border: 1px solid var(--line); border-radius: 20px;
+    padding: 14px 10px; box-shadow: var(--shadow);
+  }
+  .stat b { display: block; font-family: "Fraunces", serif; font-size: 1.6rem; color: var(--deep); line-height: 1.1; }
+  .stat span { font-size: 0.76rem; color: var(--muted); font-weight: 500; }
+  .stat.hot b { color: var(--mint); }
+
+  /* ---------- controls ---------- */
+  .controls {
+    position: sticky; top: 0; z-index: 5;
+    display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center;
+    margin: 22px -18px 0; padding: 12px 18px;
+    background: rgba(255, 247, 250, 0.82); backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+  }
+  .controls.stuck { border-bottom-color: var(--line); }
+  .chips { display: flex; gap: 6px; padding: 4px; background: #fff; border: 1px solid var(--line); border-radius: 999px; overflow-x: auto; max-width: 100%; }
   .chip {
-    border: 1.5px solid var(--line);
-    background: #fff;
-    color: var(--deep);
-    padding: 7px 14px;
-    border-radius: 999px;
-    font: inherit;
-    font-size: 0.9rem;
-    cursor: pointer;
+    border: 0; background: transparent; color: var(--deep);
+    padding: 8px 15px; border-radius: 999px;
+    font: inherit; font-size: 0.88rem; font-weight: 500; cursor: pointer; white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
   }
-  .chip[aria-pressed="true"] { background: var(--pink); border-color: var(--pink); color: #fff; font-weight: 600; }
-  .spacer { flex: 1; }
-  select, input[type="search"] {
-    font: inherit; font-size: 0.9rem; color: var(--ink);
-    border: 1.5px solid var(--line); background: #fff; border-radius: 12px; padding: 7px 12px;
+  .chip[aria-pressed="true"] { background: linear-gradient(135deg, var(--rose), var(--deep)); color: #fff; font-weight: 700; box-shadow: 0 4px 12px -4px rgba(176,18,79,0.6); }
+  select {
+    font: inherit; font-size: 0.88rem; color: var(--deep); font-weight: 500;
+    border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 9px 34px 9px 15px;
+    appearance: none; -webkit-appearance: none; cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23b0124f' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 14px center;
   }
-  label.toggle { display: flex; gap: 6px; align-items: center; font-size: 0.9rem; color: var(--deep); cursor: pointer; }
+  label.toggle {
+    display: inline-flex; gap: 8px; align-items: center; cursor: pointer;
+    font-size: 0.88rem; font-weight: 500; color: var(--deep);
+    background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px 6px 8px;
+  }
+  label.toggle input { position: absolute; opacity: 0; pointer-events: none; }
+  .switch { width: 34px; height: 20px; border-radius: 999px; background: var(--line); position: relative; transition: background 0.2s; }
+  .switch::after { content: ""; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.2); transition: transform 0.2s; }
+  label.toggle input:checked + .switch { background: var(--rose); }
+  label.toggle input:checked + .switch::after { transform: translateX(14px); }
+  label.toggle input:focus-visible + .switch { outline: 2px solid var(--deep); outline-offset: 2px; }
+
+  /* ---------- grid + cards ---------- */
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    gap: 18px;
-    margin-top: 18px;
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+    gap: 22px; margin-top: 22px;
   }
   .card {
-    position: relative;
-    display: flex; flex-direction: column;
-    background: #fff;
-    border: 1.5px solid var(--line);
-    border-radius: 20px;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    box-shadow: 0 6px 18px rgba(194, 24, 91, 0.08);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    position: relative; display: flex; flex-direction: column;
+    background: var(--cream);
+    border: 1px solid var(--line); border-radius: var(--radius);
+    overflow: hidden; text-decoration: none; color: inherit;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s cubic-bezier(.2,.8,.2,1), box-shadow 0.25s;
+    animation: rise 0.5s cubic-bezier(.2,.8,.2,1) both;
   }
-  a.card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(194, 24, 91, 0.16); }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } }
+  a.card:hover { transform: translateY(-5px) rotate(-0.4deg); box-shadow: 0 2px 4px rgba(122,15,58,0.06), 0 22px 40px -14px rgba(176,18,79,0.35); }
+  a.card:hover .photo img { transform: scale(1.05); }
+  .card.deal { border-color: var(--rose); box-shadow: 0 0 0 3px rgba(232,80,127,0.18), var(--shadow); }
+  .card.oos .photo img { filter: grayscale(0.6) opacity(0.7); }
+
   .photo {
-    aspect-ratio: 1 / 1;
-    background: linear-gradient(135deg, var(--blush), #ffc9da);
+    margin: 10px 10px 0; border-radius: calc(var(--radius) - 8px);
+    aspect-ratio: 1 / 1; overflow: hidden; position: relative;
+    background: radial-gradient(circle at 50% 40%, #fff 0, var(--blush) 75%);
     display: flex; align-items: center; justify-content: center;
-    position: relative;
   }
-  .photo img { width: 100%; height: 100%; object-fit: contain; background: #fff; }
-  .photo .initial {
-    font-family: Georgia, serif; font-style: italic; font-size: 4rem; color: var(--deep); opacity: 0.55;
-  }
+  .photo img { width: 82%; height: 82%; object-fit: contain; mix-blend-mode: multiply; transition: transform 0.4s cubic-bezier(.2,.8,.2,1); }
+  .photo .initial { font-family: "Fraunces", serif; font-style: italic; font-size: 5rem; color: var(--rose); opacity: 0.45; }
+  .badges { position: absolute; top: 10px; left: 10px; right: 10px; display: flex; justify-content: space-between; align-items: flex-start; gap: 6px; pointer-events: none; }
   .badge {
-    position: absolute; top: 10px; left: 10px;
-    background: var(--deep); color: #fff;
-    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.3px;
-    padding: 5px 10px; border-radius: 999px;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.3px;
+    padding: 6px 11px; border-radius: 999px; color: #fff;
+    background: linear-gradient(135deg, var(--rose), var(--deep));
+    box-shadow: 0 4px 10px -3px rgba(176,18,79,0.5);
   }
-  .badge.low { background: var(--pink); }
-  .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
-  .tags { display: flex; gap: 6px; flex-wrap: wrap; }
-  .tag {
-    font-size: 0.72rem; background: var(--blush); color: var(--deep);
-    padding: 3px 9px; border-radius: 999px; font-weight: 600;
+  .badge.drop { background: linear-gradient(135deg, #2bb98a, var(--mint)); box-shadow: 0 4px 10px -3px rgba(31,157,116,0.5); }
+  .badge.low { background: linear-gradient(135deg, #f3c86b, var(--gold)); color: #4a2d00; }
+  .badge.oos { background: rgba(255,255,255,0.92); color: var(--muted); box-shadow: none; border: 1px solid var(--line); }
+  .badge-stack { display: flex; flex-direction: column; gap: 5px; align-items: flex-start; }
+
+  .body { padding: 14px 18px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .meta { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .tag { font-size: 0.7rem; letter-spacing: 1.4px; text-transform: uppercase; color: var(--rose); font-weight: 700; }
+  .shop { color: var(--muted); font-size: 0.78rem; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .name { margin: 0; font-family: "Fraunces", serif; font-weight: 500; font-size: 1.18rem; line-height: 1.22; color: var(--berry); }
+  .brand { display: block; font-family: "DM Sans", sans-serif; font-size: 0.78rem; font-weight: 500; color: var(--muted); margin-bottom: 1px; }
+  .price-row { display: flex; align-items: baseline; gap: 9px; margin-top: auto; padding-top: 8px; flex-wrap: wrap; }
+  .price { font-family: "Fraunces", serif; font-size: 1.75rem; font-weight: 700; color: var(--deep); letter-spacing: -0.5px; }
+  .was { color: var(--muted); text-decoration: line-through; font-size: 0.92rem; }
+  .price.none { font-family: "DM Sans", sans-serif; font-size: 0.92rem; font-weight: 500; color: var(--muted); }
+  .spark { width: 100%; height: 38px; display: block; }
+  .foot {
+    display: flex; justify-content: space-between; align-items: center; gap: 8px;
+    border-top: 1px dashed var(--line); padding-top: 10px; margin-top: 4px;
+    font-size: 0.8rem; color: var(--muted);
   }
-  .name { margin: 0; font-size: 1.02rem; line-height: 1.3; font-weight: 700; }
-  .shop { color: var(--muted); font-size: 0.82rem; }
-  .price-row { display: flex; align-items: baseline; gap: 10px; margin-top: auto; }
-  .price { font-size: 1.5rem; font-weight: 800; color: var(--deep); }
-  .price.none { font-size: 0.95rem; font-weight: 600; color: var(--muted); }
-  .facts { font-size: 0.8rem; color: var(--muted); display: flex; flex-direction: column; gap: 2px; }
-  .status { font-size: 0.82rem; font-weight: 700; color: var(--deep); }
-  .spark { width: 100%; height: 34px; margin-top: 2px; }
-  .empty { text-align: center; color: var(--muted); padding: 48px 0; }
-  footer { margin-top: 36px; text-align: center; color: var(--muted); font-size: 0.8rem; }
+  .status { font-weight: 700; color: var(--deep); }
+  .status.go { color: var(--mint); }
+  .target-bar { height: 6px; border-radius: 999px; background: var(--blush); overflow: hidden; margin-top: 2px; }
+  .target-bar i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #ffb3c9, var(--rose)); }
+  .target-bar.hit i { background: linear-gradient(90deg, #7fe0bd, var(--mint)); }
+  .elsewhere {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 0.8rem; font-weight: 700; color: var(--mint);
+    background: #e8f7f0; border-radius: 10px; padding: 6px 9px;
+  }
+  .note { font-size: 0.78rem; color: var(--muted); font-style: italic; }
+
+  .empty { text-align: center; color: var(--muted); padding: 60px 0; font-family: "Fraunces", serif; font-style: italic; font-size: 1.2rem; }
+  footer { margin-top: 44px; text-align: center; color: var(--muted); font-size: 0.82rem; }
+  footer .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--mint); margin-right: 6px; box-shadow: 0 0 0 4px rgba(31,157,116,0.18); vertical-align: middle; }
+
+  @media (max-width: 520px) {
+    header { padding-top: 34px; }
+    .stats { gap: 8px; }
+    .stat b { font-size: 1.3rem; }
+    .grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .photo { margin: 7px 7px 0; }
+    .body { padding: 10px 12px 14px; }
+    .name { font-size: 1rem; }
+    .price { font-size: 1.35rem; }
+    .spark, .note, .shop { display: none; }
+    .badge { font-size: 0.64rem; padding: 5px 8px; }
+    .foot { font-size: 0.72rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <h1>My Wishlist</h1>
-    <p class="sub" id="sub">Loading…</p>
-    <div class="controls">
-      <div class="chips" id="chips" role="group" aria-label="Category"></div>
-      <span class="spacer"></span>
-      <select id="who" aria-label="Who it is for"></select>
-      <select id="sort" aria-label="Sort">
-        <option value="priority">Sort: priority</option>
-        <option value="target">Sort: closest to target</option>
-        <option value="price">Sort: price, low to high</option>
-      </select>
-      <label class="toggle"><input type="checkbox" id="deals"> Only deals</label>
+    <span class="kicker">🎀 Price-watched daily</span>
+    <h1>My Wishlist <span class="heart">♡</span></h1>
+    <p class="sub" id="sub">Loading the pretty things…</p>
+    <div class="stats" id="stats" hidden>
+      <div class="stat"><b id="s-count">0</b><span>on the list</span></div>
+      <div class="stat hot"><b id="s-deals">0</b><span>deals right now</span></div>
+      <div class="stat"><b id="s-saved">£0</b><span>off peak prices</span></div>
     </div>
   </header>
+
+  <div class="controls" id="controls">
+    <div class="chips" id="chips" role="group" aria-label="Category"></div>
+    <select id="who" aria-label="Who it is for"></select>
+    <select id="sort" aria-label="Sort">
+      <option value="priority">Priority</option>
+      <option value="drop">Biggest drop</option>
+      <option value="target">Closest to target</option>
+      <option value="price">Price, low to high</option>
+    </select>
+    <label class="toggle"><input type="checkbox" id="deals"><span class="switch"></span>Deals only</label>
+  </div>
+
   <main>
     <div class="grid" id="grid"></div>
-    <div class="empty" id="empty" hidden>Nothing matches those filters.</div>
+    <div class="empty" id="empty" hidden>Nothing here right now, babe ♡</div>
   </main>
   <footer id="foot"></footer>
 </div>
@@ -135,8 +243,9 @@
 const state = { cat: "All", who: "All", sort: "priority", deals: false };
 let data = { items: [], updated: null };
 
-const money = (n) => "£" + n.toFixed(2);
+const money = (n) => "£" + (Number.isInteger(n) ? n : n.toFixed(2));
 const PRIORITY = { "Must have": 0, "Want": 1, "Nice to have": 2 };
+const BRANDS = ["Jean Paul Gaultier", "Carolina Herrera", "Paco Rabanne", "Lancôme", "Herschel"];
 const el = (tag, cls, text) => {
   const node = document.createElement(tag);
   if (cls) node.className = cls;
@@ -144,55 +253,74 @@ const el = (tag, cls, text) => {
   return node;
 };
 
+function peak(it) {
+  if (!it.history || !it.history.length) return null;
+  return Math.max(...it.history.slice(-30).map((h) => h.price));
+}
+function dropPct(it) {
+  const p = peak(it);
+  if (it.price == null || p == null || p <= it.price) return 0;
+  return Math.round(((p - it.price) / p) * 100);
+}
+function isAtTarget(it) { return it.price != null && it.target != null && it.price <= it.target; }
+function cheaperElsewhere(it) { return it.elsewhere && (it.price == null || it.elsewhere.price < it.price) ? it.elsewhere : null; }
 function isDeal(it) {
-  return it.price != null && it.target != null && it.price <= it.target;
+  const e = cheaperElsewhere(it);
+  return (it.inStock !== false && (isAtTarget(it) || dropPct(it) >= 5)) || (e && it.target != null && e.price <= it.target);
+}
+
+function splitName(name) {
+  const b = BRANDS.find((x) => name.startsWith(x + " "));
+  return b ? [b, name.slice(b.length + 1)] : [null, name];
 }
 
 function statusText(it) {
-  if (!it.url) return "Needs a link";
-  if (it.price == null) return it.checkStatus && it.checkStatus !== "OK" ? it.checkStatus : "Not checked yet";
-  if (it.target == null) return "Set a target price";
-  if (it.price <= it.target) return "Buy now";
-  return money(it.price - it.target) + " above your target";
+  if (!it.url) return ["Needs a link", false];
+  if (it.price == null) return [it.checkStatus && it.checkStatus !== "OK" ? it.checkStatus : "Not checked yet", false];
+  if (it.inStock === false) return ["Waiting for restock", false];
+  if (isAtTarget(it)) return ["Buy now ✨", true];
+  if (dropPct(it) >= 5) return ["Price dropped", true];
+  if (it.target == null) return ["Watching", false];
+  return [money(+(it.price - it.target).toFixed(2)) + " to go", false];
 }
 
-function sparkline(history) {
+function sparkline(history, id) {
   if (!history || history.length < 2) return null;
   const pts = history.slice(-30).map((h) => h.price);
   const lo = Math.min(...pts), hi = Math.max(...pts);
+  const flat = hi === lo;
   const span = hi - lo || 1;
-  const w = 200, h = 34, pad = 3;
-  const coords = pts.map((p, i) => {
-    const x = pad + (i * (w - pad * 2)) / (pts.length - 1);
-    const y = h - pad - ((p - lo) / span) * (h - pad * 2);
-    return x.toFixed(1) + "," + y.toFixed(1);
-  });
-  const ns = "http://www.w3.org/2000/svg";
-  const svg = document.createElementNS(ns, "svg");
-  svg.setAttribute("viewBox", "0 0 " + w + " " + h);
-  svg.setAttribute("class", "spark");
-  svg.setAttribute("role", "img");
-  svg.setAttribute("aria-label", "Price over the last " + pts.length + " checks");
-  const line = document.createElementNS(ns, "polyline");
-  line.setAttribute("points", coords.join(" "));
-  line.setAttribute("fill", "none");
-  line.setAttribute("stroke", "#e75480");
-  line.setAttribute("stroke-width", "2.5");
-  line.setAttribute("stroke-linecap", "round");
-  line.setAttribute("stroke-linejoin", "round");
-  svg.appendChild(line);
-  return svg;
+  const w = 200, h = 38, pad = 4;
+  const xy = pts.map((p, i) => [
+    pad + (i * (w - pad * 2)) / (pts.length - 1),
+    flat ? h / 2 : h - pad - ((p - lo) / span) * (h - pad * 2),
+  ]);
+  const line = xy.map(([x, y]) => x.toFixed(1) + "," + y.toFixed(1)).join(" ");
+  const area = line + " " + (w - pad) + "," + h + " " + pad + "," + h;
+  const last = xy[xy.length - 1];
+  const wrap = document.createElement("div");
+  wrap.innerHTML =
+    '<svg class="spark" viewBox="0 0 ' + w + " " + h + '" preserveAspectRatio="none" role="img" aria-label="Price over the last ' + pts.length + ' checks">' +
+    '<defs><linearGradient id="g' + id + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8507f" stop-opacity=".28"/><stop offset="1" stop-color="#e8507f" stop-opacity="0"/></linearGradient></defs>' +
+    '<polygon points="' + area + '" fill="url(#g' + id + ')"/>' +
+    '<polyline points="' + line + '" fill="none" stroke="#e8507f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>' +
+    '<circle cx="' + last[0] + '" cy="' + last[1] + '" r="3.6" fill="#fff" stroke="#b0124f" stroke-width="2" vector-effect="non-scaling-stroke"/>' +
+    "</svg>";
+  return wrap.firstChild;
 }
 
-function card(it) {
+function card(it, i) {
   const root = it.url ? el("a", "card") : el("div", "card");
   if (it.url) { root.href = it.url; root.target = "_blank"; root.rel = "noopener"; }
+  if (isDeal(it)) root.classList.add("deal");
+  if (it.inStock === false) root.classList.add("oos");
+  root.style.animationDelay = Math.min(i * 45, 500) + "ms";
 
   const photo = el("div", "photo");
   const initial = el("span", "initial", (it.name || "?").trim().charAt(0).toUpperCase());
   if (it.image) {
     const img = document.createElement("img");
-    img.src = it.image;
+    img.src = it.image.replace(/^http:/, "https:");
     img.alt = it.name;
     img.loading = "lazy";
     img.referrerPolicy = "no-referrer";
@@ -201,48 +329,79 @@ function card(it) {
   } else {
     photo.appendChild(initial);
   }
-  if (isDeal(it)) photo.appendChild(el("span", "badge", "Buy now"));
-  else if (it.price != null && it.history && it.history.length > 1 && it.price <= it.lowest) {
-    photo.appendChild(el("span", "badge low", "Lowest yet"));
+
+  const badges = el("div", "badges");
+  const left = el("div", "badge-stack");
+  const pct = dropPct(it);
+  if (isAtTarget(it) && it.inStock !== false) left.appendChild(el("span", "badge", "Buy now"));
+  if (pct >= 5) left.appendChild(el("span", "badge drop", "↓ " + pct + "%"));
+  else if (it.price != null && it.history && new Set(it.history.map((h) => h.price)).size > 1 && it.price <= it.lowest) {
+    left.appendChild(el("span", "badge low", "Lowest yet"));
   }
+  badges.appendChild(left);
+  if (it.inStock === false) badges.appendChild(el("span", "badge oos", "Sold out"));
+  photo.appendChild(badges);
   root.appendChild(photo);
 
   const body = el("div", "body");
-  const tags = el("div", "tags");
-  if (it.category) tags.appendChild(el("span", "tag", it.category));
-  if (it.for) tags.appendChild(el("span", "tag", "For " + it.for));
-  body.appendChild(tags);
-  body.appendChild(el("h2", "name", it.name));
+  const meta = el("div", "meta");
+  meta.appendChild(el("span", "tag", [it.category, it.for && it.for !== "Me" ? "for " + it.for : null].filter(Boolean).join(" · ")));
   const shop = [it.retailer, it.size].filter(Boolean).join(" · ");
-  if (shop) body.appendChild(el("div", "shop", shop));
+  if (shop) meta.appendChild(el("span", "shop", shop));
+  body.appendChild(meta);
+
+  const [brand, rest] = splitName(it.name);
+  const h = el("h2", "name");
+  if (brand) h.appendChild(el("span", "brand", brand));
+  h.appendChild(document.createTextNode(rest));
+  body.appendChild(h);
 
   const row = el("div", "price-row");
-  if (it.price != null) row.appendChild(el("span", "price", money(it.price)));
-  else row.appendChild(el("span", "price none", "No price yet"));
+  if (it.price != null) {
+    row.appendChild(el("span", "price", money(it.price)));
+    const p = peak(it);
+    if (pct >= 1 && p) row.appendChild(el("span", "was", money(p)));
+  } else {
+    row.appendChild(el("span", "price none", "No price yet"));
+  }
   body.appendChild(row);
 
-  const facts = el("div", "facts");
-  if (it.target != null) facts.appendChild(el("span", null, "Target " + money(it.target)));
-  if (it.lowest != null && it.price != null && it.lowest < it.price) facts.appendChild(el("span", null, "Lowest seen " + money(it.lowest)));
-  if (it.inStock === false) facts.appendChild(el("span", null, "Out of stock"));
-  if (it.notes) facts.appendChild(el("span", null, it.notes));
-  body.appendChild(facts);
+  const e = cheaperElsewhere(it);
+  if (e) body.appendChild(el("div", "elsewhere", "💸 " + money(e.price) + " at " + e.shop));
 
-  const spark = sparkline(it.history);
+  if (it.target != null && it.price != null) {
+    const bar = el("div", "target-bar" + (isAtTarget(it) ? " hit" : ""));
+    const fill = document.createElement("i");
+    fill.style.width = Math.max(8, Math.min(100, (it.target / it.price) * 100)) + "%";
+    bar.appendChild(fill);
+    bar.title = "Target " + money(it.target);
+    body.appendChild(bar);
+  }
+
+  const spark = sparkline(it.history, it.id || i);
   if (spark) body.appendChild(spark);
-  body.appendChild(el("div", "status", statusText(it)));
+  if (!it.url && it.notes) body.appendChild(el("div", "note", it.notes));
+
+  const foot = el("div", "foot");
+  const [txt, go] = statusText(it);
+  foot.appendChild(el("span", "status" + (go ? " go" : ""), txt));
+  if (it.target != null) foot.appendChild(el("span", null, "Target " + money(it.target)));
+  else if (it.lowest != null && it.price != null && it.lowest < it.price) foot.appendChild(el("span", null, "Low " + money(it.lowest)));
+  body.appendChild(foot);
+
   root.appendChild(body);
   return root;
 }
 
 function visible() {
-  let list = data.items.filter((it) =>
+  const list = data.items.filter((it) =>
     (state.cat === "All" || it.category === state.cat) &&
     (state.who === "All" || it.for === state.who) &&
     (!state.deals || isDeal(it)));
   const gap = (it) => (it.price != null && it.target != null ? it.price - it.target : Infinity);
   const sorters = {
-    priority: (a, b) => (PRIORITY[a.priority] ?? 3) - (PRIORITY[b.priority] ?? 3),
+    priority: (a, b) => (isDeal(b) - isDeal(a)) || ((PRIORITY[a.priority] ?? 3) - (PRIORITY[b.priority] ?? 3)) || ((a.inStock === false) - (b.inStock === false)),
+    drop: (a, b) => dropPct(b) - dropPct(a),
     target: (a, b) => gap(a) - gap(b),
     price: (a, b) => (a.price ?? Infinity) - (b.price ?? Infinity),
   };
@@ -253,7 +412,7 @@ function render() {
   const grid = document.getElementById("grid");
   grid.replaceChildren();
   const list = visible();
-  list.forEach((it) => grid.appendChild(card(it)));
+  list.forEach((it, i) => grid.appendChild(card(it, i)));
   document.getElementById("empty").hidden = list.length > 0;
   document.querySelectorAll("#chips .chip").forEach((c) =>
     c.setAttribute("aria-pressed", String(c.dataset.cat === state.cat)));
@@ -271,20 +430,35 @@ function setup() {
   });
   const whos = ["All", ...new Set(data.items.map((i) => i.for).filter(Boolean))];
   const who = document.getElementById("who");
-  whos.forEach((w) => who.appendChild(new Option(w === "All" ? "For: everyone" : "For " + w, w)));
+  if (whos.length <= 2) who.hidden = true;
+  whos.forEach((w) => who.appendChild(new Option(w === "All" ? "For everyone" : "For " + w, w)));
   who.onchange = () => { state.who = who.value; render(); };
   document.getElementById("sort").onchange = (e) => { state.sort = e.target.value; render(); };
   document.getElementById("deals").onchange = (e) => { state.deals = e.target.checked; render(); };
 
-  const n = data.items.length;
-  document.getElementById("sub").textContent = n + (n === 1 ? " thing" : " things") + " I am after";
+  const items = data.items;
+  const n = items.length;
+  const deals = items.filter(isDeal).length;
+  const saved = items.reduce((s, it) => { const p = peak(it); return s + (p != null && it.price != null && it.inStock !== false ? p - it.price : 0); }, 0);
+  document.getElementById("sub").textContent = deals
+    ? deals + (deals === 1 ? " little treat is" : " little treats are") + " on sale right now 💸"
+    : "Nothing on sale yet — the robot is keeping watch.";
+  document.getElementById("s-count").textContent = n;
+  document.getElementById("s-deals").textContent = deals;
+  document.getElementById("s-saved").textContent = "£" + Math.round(saved);
+  document.getElementById("stats").hidden = false;
+
   const foot = document.getElementById("foot");
   if (data.updated) {
     const d = new Date(data.updated);
-    foot.textContent = "Prices last checked " + d.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+    foot.innerHTML = '<span class="dot"></span>';
+    foot.appendChild(document.createTextNode("Prices last checked " + d.toLocaleDateString("en-GB", { day: "numeric", month: "long" }) + " at " + d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })));
   } else {
     foot.textContent = "Prices have not been checked yet. The first check runs on its own overnight.";
   }
+
+  const controls = document.getElementById("controls");
+  new IntersectionObserver(([e]) => controls.classList.toggle("stuck", e.intersectionRatio < 1), { threshold: [1], rootMargin: "-1px 0px 0px 0px" }).observe(controls);
 }
 
 fetch("items.json?v=" + Date.now())

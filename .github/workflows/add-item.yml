@@ -1,0 +1,44 @@
+name: Add to wishlist
+
+# The phone button opens an issue titled "Add to wishlist" with the link in it.
+# This adds the item and closes the issue. Issues from anyone other than the
+# repo owner are ignored, so strangers cannot add things to the list.
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: wishlist-data
+  cancel-in-progress: false
+
+jobs:
+  add:
+    if: startsWith(github.event.issue.title, 'Add to wishlist') && github.event.issue.user.login == github.repository_owner
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Add the item
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python3 scripts/add_item.py
+
+      - name: Save it
+        run: |
+          git config user.name "wishlist-bot"
+          git config user.email "wishlist-bot@users.noreply.github.com"
+          git add items.json
+          git diff --staged --quiet || git commit -m "Add item from phone"
+          git pull --rebase -q
+          git push
+
+      - name: Reply and close
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue close "${{ github.event.issue.number }}" --repo "${{ github.repository }}" --comment "$(cat added.txt)"
