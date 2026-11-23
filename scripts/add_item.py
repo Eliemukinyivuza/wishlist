@@ -41,10 +41,10 @@ def parse_body(body):
             fields[m.group(1).lower()] = m.group(2).strip()
     if "url" not in fields and "link" in fields:
         fields["url"] = fields["link"]
-    if "url" not in fields:
-        m = re.search(r"https?://\S+", body or "")
-        if m:
-            fields["url"] = m.group(0)
+    # Shop apps often share "Product name https://link", so keep just the link.
+    m = re.search(r"https?://\S+", fields.get("url", "")) or re.search(r"https?://\S+", body or "")
+    if m:
+        fields["url"] = m.group(0)
     return fields
 
 
