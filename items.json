@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T18:22:30Z",
+  "updated": "2026-11-24T17:53:35Z",
   "items": [
     {
       "id": "idole",
@@ -89,12 +89,16 @@
         {
           "date": "2026-11-23",
           "price": 66.5
+        },
+        {
+          "date": "2026-11-24",
+          "price": 66.5
         }
       ],
       "price": 66.5,
       "inStock": true,
       "lowest": 66.5,
-      "lastChecked": "2026-11-23",
+      "lastChecked": "2026-11-24",
       "checkStatus": "OK",
       "offersSeen": [
         {
@@ -204,12 +208,16 @@
         {
           "date": "2026-11-23",
           "price": 82.4
+        },
+        {
+          "date": "2026-11-24",
+          "price": 82.4
         }
       ],
       "price": 82.4,
       "inStock": true,
       "lowest": 82.4,
-      "lastChecked": "2026-11-23",
+      "lastChecked": "2026-11-24",
       "offersSeen": [
         {
           "price": 56.0,
@@ -314,23 +322,27 @@
         {
           "date": "2026-11-23",
           "price": 84.75
+        },
+        {
+          "date": "2026-11-24",
+          "price": 87.2
         }
       ],
-      "price": 84.75,
+      "price": 87.2,
       "inStock": true,
       "lowest": 84.75,
-      "lastChecked": "2026-11-23",
+      "lastChecked": "2026-11-24",
       "offersSeen": [
         {
           "price": 60.8,
           "label": "Carolina Herrera Good Girl Blush Eau de Parfum 50ml 14270128 https://www.lookfan"
         },
         {
-          "price": 104.25,
+          "price": 112.0,
           "label": "Carolina Herrera Good Girl Blush Eau de Parfum 50ml 14270126 https://www.lookfan"
         },
         {
-          "price": 84.75,
+          "price": 87.2,
           "label": "Carolina Herrera Good Girl Blush Eau de Parfum 50ml 14270127 https://www.lookfan"
         }
       ]
@@ -424,12 +436,16 @@
         {
           "date": "2026-11-23",
           "price": 116.0
+        },
+        {
+          "date": "2026-11-24",
+          "price": 116.0
         }
       ],
       "price": 116.0,
       "inStock": true,
       "lowest": 108.75,
-      "lastChecked": "2026-11-23",
+      "lastChecked": "2026-11-24",
       "offersSeen": [
         {
           "price": 64.0,
@@ -547,12 +563,16 @@
         {
           "date": "2026-11-23",
           "price": 69.3
+        },
+        {
+          "date": "2026-11-24",
+          "price": 69.3
         }
       ],
       "price": 69.3,
       "inStock": true,
       "lowest": 49.5,
-      "lastChecked": "2026-11-23",
+      "lastChecked": "2026-11-24",
       "offersSeen": [
         {
           "price": 102.4,
@@ -661,12 +681,16 @@
         {
           "date": "2026-11-23",
           "price": 75.2
+        },
+        {
+          "date": "2026-11-24",
+          "price": 75.2
         }
       ],
       "price": 75.2,
       "inStock": false,
       "lowest": 75.2,
-      "lastChecked": "2026-11-23",
+      "lastChecked": "2026-11-24",
       "offersSeen": [
         {
           "price": 75.2,
@@ -762,12 +786,16 @@
         {
           "date": "2026-11-23",
           "price": 66.95
+        },
+        {
+          "date": "2026-11-24",
+          "price": 66.95
         }
       ],
       "price": 66.95,
       "inStock": true,
       "lowest": 66.95,
-      "lastChecked": "2026-11-23",
+      "lastChecked": "2026-11-24",
       "checkStatus": "OK",
       "offersSeen": [
         {
@@ -864,12 +892,16 @@
         {
           "date": "2026-11-23",
           "price": 52.99
+        },
+        {
+          "date": "2026-11-24",
+          "price": 52.99
         }
       ],
       "price": 52.99,
       "inStock": true,
       "lowest": 52.99,
-      "lastChecked": "2026-11-23",
+      "lastChecked": "2026-11-24",
       "checkStatus": "OK",
       "offersSeen": [
         {
@@ -966,12 +998,16 @@
         {
           "date": "2026-11-23",
           "price": 44.99
+        },
+        {
+          "date": "2026-11-24",
+          "price": 44.99
         }
       ],
       "price": 44.99,
       "inStock": true,
       "lowest": 44.99,
-      "lastChecked": "2026-11-23",
+      "lastChecked": "2026-11-24",
       "checkStatus": "OK",
       "offersSeen": [
         {
