@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T17:20:53Z",
+  "updated": "2026-11-26T17:00:31Z",
   "items": [
     {
       "id": "idole",
@@ -97,12 +97,16 @@
         {
           "date": "2026-11-25",
           "price": 66.5
+        },
+        {
+          "date": "2026-11-26",
+          "price": 66.5
         }
       ],
       "price": 66.5,
       "inStock": true,
       "lowest": 66.5,
-      "lastChecked": "2026-11-25",
+      "lastChecked": "2026-11-26",
       "checkStatus": "OK",
       "offersSeen": [
         {
@@ -220,15 +224,19 @@
         {
           "date": "2026-11-25",
           "price": 82.4
+        },
+        {
+          "date": "2026-11-26",
+          "price": 72.1
         }
       ],
-      "price": 82.4,
+      "price": 72.1,
       "inStock": true,
-      "lowest": 82.4,
-      "lastChecked": "2026-11-25",
+      "lowest": 72.1,
+      "lastChecked": "2026-11-26",
       "offersSeen": [
         {
-          "price": 56.0,
+          "price": 49.0,
           "label": "Carolina Herrera La Bomba Intensa Eau de Parfum Refillable 50ml 17854046 https:/"
         },
         {
@@ -236,7 +244,7 @@
           "label": "Carolina Herrera La Bomba Intensa Eau de Parfum Refillable 50ml 17854044 https:/"
         },
         {
-          "price": 82.4,
+          "price": 72.1,
           "label": "Carolina Herrera La Bomba Intensa Eau de Parfum Refillable 50ml 17854039 https:/"
         }
       ]
@@ -338,23 +346,27 @@
         {
           "date": "2026-11-25",
           "price": 87.2
+        },
+        {
+          "date": "2026-11-26",
+          "price": 76.3
         }
       ],
-      "price": 87.2,
+      "price": 76.3,
       "inStock": true,
-      "lowest": 84.75,
-      "lastChecked": "2026-11-25",
+      "lowest": 76.3,
+      "lastChecked": "2026-11-26",
       "offersSeen": [
         {
-          "price": 60.8,
+          "price": 53.2,
           "label": "Carolina Herrera Good Girl Blush Eau de Parfum 50ml 14270128 https://www.lookfan"
         },
         {
-          "price": 112.0,
+          "price": 98.0,
           "label": "Carolina Herrera Good Girl Blush Eau de Parfum 50ml 14270126 https://www.lookfan"
         },
         {
-          "price": 87.2,
+          "price": 76.3,
           "label": "Carolina Herrera Good Girl Blush Eau de Parfum 50ml 14270127 https://www.lookfan"
         }
       ]
@@ -456,23 +468,27 @@
         {
           "date": "2026-11-25",
           "price": 116.0
+        },
+        {
+          "date": "2026-11-26",
+          "price": 101.5
         }
       ],
-      "price": 116.0,
+      "price": 101.5,
       "inStock": true,
-      "lowest": 108.75,
-      "lastChecked": "2026-11-25",
+      "lowest": 101.5,
+      "lastChecked": "2026-11-26",
       "offersSeen": [
         {
-          "price": 64.0,
+          "price": 56.0,
           "label": "Jean Paul Gaultier Scandal Elixir Parfum 80 ml 17623702 https://www.lookfantasti"
         },
         {
-          "price": 116.0,
+          "price": 101.5,
           "label": "Jean Paul Gaultier Scandal Elixir Parfum 80 ml 17623701 https://www.lookfantasti"
         },
         {
-          "price": 86.25,
+          "price": 80.5,
           "label": "Jean Paul Gaultier Scandal Elixir Parfum 80 ml 17623700 https://www.lookfantasti"
         }
       ]
@@ -587,27 +603,31 @@
         {
           "date": "2026-11-25",
           "price": 69.3
+        },
+        {
+          "date": "2026-11-26",
+          "price": 49.5
         }
       ],
-      "price": 69.3,
+      "price": 49.5,
       "inStock": true,
       "lowest": 49.5,
-      "lastChecked": "2026-11-25",
+      "lastChecked": "2026-11-26",
       "offersSeen": [
         {
-          "price": 102.4,
+          "price": 89.6,
           "label": "Rabanne Fame Eau De Parfum 50ml 13936232 https://www.lookfantastic.com/p/paco-ra"
         },
         {
-          "price": 128.0,
+          "price": 112.0,
           "label": "Rabanne Fame Eau De Parfum 50ml 13936227 https://www.lookfantastic.com/p/paco-ra"
         },
         {
-          "price": 69.3,
+          "price": 49.5,
           "label": "Rabanne Fame Eau De Parfum 50ml 13936231 https://www.lookfantastic.com/p/paco-ra"
         },
         {
-          "price": 50.25,
+          "price": 46.9,
           "label": "Rabanne Fame Eau De Parfum 50ml 13936230 https://www.lookfantastic.com/p/paco-ra"
         }
       ]
@@ -709,15 +729,19 @@
         {
           "date": "2026-11-25",
           "price": 75.2
+        },
+        {
+          "date": "2026-11-26",
+          "price": 65.8
         }
       ],
-      "price": 75.2,
+      "price": 65.8,
       "inStock": true,
-      "lowest": 75.2,
-      "lastChecked": "2026-11-25",
+      "lowest": 65.8,
+      "lastChecked": "2026-11-26",
       "offersSeen": [
         {
-          "price": 75.2,
+          "price": 65.8,
           "label": "Rabanne Fame In Love Parfum Elixir 50ml 17623714 https://www.lookfantastic.com/p"
         }
       ]
@@ -818,12 +842,16 @@
         {
           "date": "2026-11-25",
           "price": 66.95
+        },
+        {
+          "date": "2026-11-26",
+          "price": 66.95
         }
       ],
       "price": 66.95,
       "inStock": true,
       "lowest": 66.95,
-      "lastChecked": "2026-11-25",
+      "lastChecked": "2026-11-26",
       "checkStatus": "OK",
       "offersSeen": [
         {
@@ -928,12 +956,16 @@
         {
           "date": "2026-11-25",
           "price": 52.99
+        },
+        {
+          "date": "2026-11-26",
+          "price": 52.99
         }
       ],
       "price": 52.99,
       "inStock": true,
       "lowest": 52.99,
-      "lastChecked": "2026-11-25",
+      "lastChecked": "2026-11-26",
       "checkStatus": "OK",
       "offersSeen": [
         {
@@ -1038,12 +1070,16 @@
         {
           "date": "2026-11-25",
           "price": 44.99
+        },
+        {
+          "date": "2026-11-26",
+          "price": 44.99
         }
       ],
       "price": 44.99,
       "inStock": true,
       "lowest": 44.99,
-      "lastChecked": "2026-11-25",
+      "lastChecked": "2026-11-26",
       "checkStatus": "OK",
       "offersSeen": [
         {
