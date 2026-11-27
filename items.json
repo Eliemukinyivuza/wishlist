@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T17:00:31Z",
+  "updated": "2026-11-27T16:46:58Z",
   "items": [
     {
       "id": "idole",
@@ -101,12 +101,16 @@
         {
           "date": "2026-11-26",
           "price": 66.5
+        },
+        {
+          "date": "2026-11-27",
+          "price": 66.5
         }
       ],
       "price": 66.5,
       "inStock": true,
       "lowest": 66.5,
-      "lastChecked": "2026-11-26",
+      "lastChecked": "2026-11-27",
       "checkStatus": "OK",
       "offersSeen": [
         {
@@ -228,19 +232,23 @@
         {
           "date": "2026-11-26",
           "price": 72.1
+        },
+        {
+          "date": "2026-11-27",
+          "price": 72.1
         }
       ],
       "price": 72.1,
       "inStock": true,
       "lowest": 72.1,
-      "lastChecked": "2026-11-26",
+      "lastChecked": "2026-11-27",
       "offersSeen": [
         {
           "price": 49.0,
           "label": "Carolina Herrera La Bomba Intensa Eau de Parfum Refillable 50ml 17854046 https:/"
         },
         {
-          "price": 105.6,
+          "price": 92.4,
           "label": "Carolina Herrera La Bomba Intensa Eau de Parfum Refillable 50ml 17854044 https:/"
         },
         {
@@ -350,12 +358,16 @@
         {
           "date": "2026-11-26",
           "price": 76.3
+        },
+        {
+          "date": "2026-11-27",
+          "price": 76.3
         }
       ],
       "price": 76.3,
       "inStock": true,
       "lowest": 76.3,
-      "lastChecked": "2026-11-26",
+      "lastChecked": "2026-11-27",
       "offersSeen": [
         {
           "price": 53.2,
@@ -472,12 +484,16 @@
         {
           "date": "2026-11-26",
           "price": 101.5
+        },
+        {
+          "date": "2026-11-27",
+          "price": 101.5
         }
       ],
       "price": 101.5,
       "inStock": true,
       "lowest": 101.5,
-      "lastChecked": "2026-11-26",
+      "lastChecked": "2026-11-27",
       "offersSeen": [
         {
           "price": 56.0,
@@ -607,12 +623,16 @@
         {
           "date": "2026-11-26",
           "price": 49.5
+        },
+        {
+          "date": "2026-11-27",
+          "price": 49.5
         }
       ],
       "price": 49.5,
-      "inStock": true,
+      "inStock": false,
       "lowest": 49.5,
-      "lastChecked": "2026-11-26",
+      "lastChecked": "2026-11-27",
       "offersSeen": [
         {
           "price": 89.6,
@@ -733,12 +753,16 @@
         {
           "date": "2026-11-26",
           "price": 65.8
+        },
+        {
+          "date": "2026-11-27",
+          "price": 65.8
         }
       ],
       "price": 65.8,
       "inStock": true,
       "lowest": 65.8,
-      "lastChecked": "2026-11-26",
+      "lastChecked": "2026-11-27",
       "offersSeen": [
         {
           "price": 65.8,
@@ -846,12 +870,16 @@
         {
           "date": "2026-11-26",
           "price": 66.95
+        },
+        {
+          "date": "2026-11-27",
+          "price": 66.95
         }
       ],
       "price": 66.95,
       "inStock": true,
       "lowest": 66.95,
-      "lastChecked": "2026-11-26",
+      "lastChecked": "2026-11-27",
       "checkStatus": "OK",
       "offersSeen": [
         {
@@ -960,12 +988,16 @@
         {
           "date": "2026-11-26",
           "price": 52.99
+        },
+        {
+          "date": "2026-11-27",
+          "price": 52.99
         }
       ],
       "price": 52.99,
       "inStock": true,
       "lowest": 52.99,
-      "lastChecked": "2026-11-26",
+      "lastChecked": "2026-11-27",
       "checkStatus": "OK",
       "offersSeen": [
         {
@@ -1074,12 +1106,16 @@
         {
           "date": "2026-11-26",
           "price": 44.99
+        },
+        {
+          "date": "2026-11-27",
+          "price": 44.99
         }
       ],
       "price": 44.99,
       "inStock": true,
       "lowest": 44.99,
-      "lastChecked": "2026-11-26",
+      "lastChecked": "2026-11-27",
       "checkStatus": "OK",
       "offersSeen": [
         {
